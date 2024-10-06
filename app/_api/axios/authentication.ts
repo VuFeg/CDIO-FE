@@ -1,20 +1,54 @@
-import axios from "axios";
-const BASE_URL = "http://localhost:8080/api/v1";
+import axios from 'axios'
+
+const AUTHENTICATION_URL = `${process.env.NEXT_PUBLIC_GREENDECO_BACKEND_API}/auth`
+
 type RegisterData = {
-  firstName: string;
-  identifier: string;
-  lastName: string;
-  email: string;
-  phoneNumber: string;
-  password: string;
-};
+	firstName: string
+	identifier: string
+	lastName: string
+	email: string
+	phoneNumber: string
+	password: string
+}
+
+type LoginData = {
+	identifier: string
+	password: string
+}
+
+type ResetPasswordData = {
+	password: string
+	token: string
+}
+
 export const authApi = axios.create({
-  baseURL: BASE_URL,
-  withCredentials: true,
-});
-authApi.defaults.headers.common["Content-Type"] = "application/json";
+	baseURL: AUTHENTICATION_URL,
+})
+
+authApi.defaults.headers.common['Content-Type'] = 'application/json'
+
 export const registerAccount = async (newAccount: RegisterData) => {
-  return await authApi
-    .post("/auth/register", newAccount)
-    .then((res) => res.data);
-};
+	return await authApi.post('/register', newAccount).then((res) => res.data)
+}
+
+export const loginAccount = async (account: LoginData) => {
+	return await authApi.post('/login', account).then((res) => res.data)
+}
+
+export const sendEmailToResetPassword = async ({ email }: { email: string }) => {
+	return await authApi.post('/forgot-password', { email }).then((res) => res.data)
+}
+
+export const resetPassword = async (resetPasswordData: ResetPasswordData) => {
+	return await authApi
+		.put(
+			'/password',
+			{ password: resetPasswordData.password },
+			{
+				headers: {
+					Authorization: `Bearer ${resetPasswordData.token}`,
+				},
+			},
+		)
+		.then((res) => res.data)
+}

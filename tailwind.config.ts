@@ -10,13 +10,33 @@ module.exports = {
 		extend: {
 			container: {
 				center: true,
+				padding: {
+					DEFAULT: '1rem',
+					sm: '2rem',
+					lg: '2.5rem',
+					xl: '3rem',
+					'2xl': '4rem',
+				},
 			},
-			screens: {
-				'2xl': '1440px',
+			backgroundColor: {
+				'light-green': '#ECF4F1',
+			},
+			backgroundImage: {
+				'product-list':
+					"url('https://www.everwallpaper.co.uk/cdn/shop/collections/Bird-and-Floral-Art-Wallpaper-Mural.jpg?v=1660109731')",
+				test: "linear-gradient(to left bottom, rgba(255,255,255,0),rgba(86, 119, 118, 0.2), rgba(70, 79, 65, 0.95)), url('https://www.everwallpaper.co.uk/cdn/shop/collections/Bird-and-Floral-Art-Wallpaper-Mural.jpg?v=1660109731')",
+				'search-banner':
+					"linear-gradient(to bottom, rgba(86, 119, 118, 0.55), rgba(86, 160, 140, 0.75), rgba(86, 129, 118, 0.9)), url('https://wallpapers.com/images/hd/green-plant-aesthetic-56nw3y24prsozi0l.jpg')",
+				adminLogin:
+					"linear-gradient(to left bottom, rgba(255,255,255,0), rgba(86, 119, 118, 0.5)), url('https://hips.hearstapps.com/hmg-prod/images/best-online-plant-delivery-1638314748.jpg')",
 			},
 			boxShadow: {
+				15: '  0px 1px 1px 0px inset rgba(255, 255, 255, 0.1), 0px 50px 100px -20px rgba(50, 50, 93, 0.25), 0px 30px 60px -30px rgba(0, 0, 0, 0.3)',
+				18: ' 0px 13px 27px -5px rgba(50, 50, 93, 0.25), 0px 8px 16px -8px rgba(0, 0, 0, 0.3) ',
+				26: ' 0px 50px 100px -20px rgba(50, 50, 93, 0.25) , 0px 30px 60px -30px rgba(0, 0, 0, 0.3) ',
 				30: ' 0px 14px 28px rgba(0, 0, 0, 0.25),0px 10px 10px rgba(0, 0, 0, 0.22) ',
 				38: ' 0px 10px 15px -3px rgba(0, 0, 0, 0.1),0px 4px 6px -2px rgba(0, 0, 0, 0.05) ',
+				63: ' 6px 2px 16px 0px rgba(136, 165, 191, 0.48),-6px -2px 16px 0px  rgba(255, 255, 255, 0.8)',
 			},
 			fontSize: {
 				heading: '2.8rem',
@@ -35,6 +55,7 @@ module.exports = {
 			fontWeight: {
 				bold: 700,
 				regular: 400,
+				'semi-bold': 600,
 				light: 300,
 			},
 			spacing: {
@@ -42,6 +63,7 @@ module.exports = {
 				cozy: '1.6rem',
 				common: '2rem',
 				comfortable: '3.2rem',
+				'away-from-header': '10rem',
 			},
 			colors: {
 				primary: {
@@ -110,6 +132,12 @@ module.exports = {
 						DEFAULT: '#fb9716',
 						light: '#fdeede',
 					},
+				},
+				'order-status': {
+					draft: '#FFB400',
+					processing: '#0085FF',
+					completed: '#4FF600',
+					cancelled: '#FC0000',
 				},
 			},
 		},
