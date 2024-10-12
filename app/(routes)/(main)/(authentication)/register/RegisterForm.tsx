@@ -1,6 +1,7 @@
 'use client'
 import { useForm, SubmitHandler } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
+import { RegisterSchema, RegisterFormInputType } from '@/app/_configs/schemas/authentication'
 import { useMutation } from '@tanstack/react-query'
 import { registerAccount } from '@/app/_api/axios/authentication'
 import { AxiosError } from 'axios'
@@ -8,10 +9,11 @@ import { notifyRegisterFail, notifyRegisterSuccess } from '../Notification'
 import { TextField } from '@/app/_components/form'
 import Button from '@/app/_components/Button'
 import { useRouter } from 'next/navigation'
-import { RegisterFormInputType, RegisterSchema } from '@/app/_config/schemas/authentication'
-import { AUTHENTICATION_ROUTE } from '@/app/_config/constants/variables'
+import { AUTHENTICATION_ROUTE } from '@/app/_configs/constants/variables'
+import { useTranslations } from 'next-intl'
 
 export default function RegisterForm() {
+	const t = useTranslations('RegisterForm')
 	const router = useRouter()
 	const defaultInputValues: RegisterFormInputType = {
 		firstName: '',
@@ -76,8 +78,8 @@ export default function RegisterForm() {
 					<div className='flex-1'>
 						<TextField
 							type='text'
-							label='First Name'
-							placeholder='First Name'
+							label={t('FirstNameLabel')}
+							placeholder={t('FirstNamePlaceholder')}
 							register={register('firstName')}
 							error={Boolean(errors?.firstName)}
 							helperText={errors?.firstName?.message}
@@ -86,8 +88,8 @@ export default function RegisterForm() {
 					<div className='flex-1'>
 						<TextField
 							type='text'
-							label='Last Name'
-							placeholder='Last Name'
+							label={t('LastNameLabel')}
+							placeholder={t('LastNamePlaceholder')}
 							register={register('lastName')}
 							error={Boolean(errors?.lastName)}
 							helperText={errors?.lastName?.message}
@@ -97,8 +99,8 @@ export default function RegisterForm() {
 				<div>
 					<TextField
 						type='email'
-						label='Email'
-						placeholder='Your Email'
+						label={t('EmailLabel')}
+						placeholder={t('EmailPlaceholder')}
 						register={register('email')}
 						error={Boolean(errors?.email)}
 						helperText={errors?.email?.message}
@@ -107,8 +109,8 @@ export default function RegisterForm() {
 				<div>
 					<TextField
 						type='tel'
-						label='Phone Number'
-						placeholder='Phone Number'
+						label={t('PhoneNumberLabel')}
+						placeholder={t('PhoneNumberPlaceholder')}
 						register={register('phoneNumber')}
 						error={Boolean(errors?.phoneNumber)}
 						helperText={errors?.phoneNumber?.message}
@@ -117,8 +119,8 @@ export default function RegisterForm() {
 				<div>
 					<TextField
 						type='password'
-						label='Password'
-						placeholder='Password'
+						label={t('PasswordLabel')}
+						placeholder={t('PasswordPlaceholder')}
 						register={register('password')}
 						error={Boolean(errors?.password)}
 						helperText={errors?.password?.message}
@@ -127,8 +129,8 @@ export default function RegisterForm() {
 				<div>
 					<TextField
 						type='password'
-						label='Confirm Password'
-						placeholder='Confirm Password'
+						label={t('ConfirmPasswordLabel')}
+						placeholder={t('ConfirmPasswordPlaceholder')}
 						register={register('passwordConfirm')}
 						error={Boolean(errors?.passwordConfirm)}
 						helperText={errors?.passwordConfirm?.message}
@@ -138,7 +140,7 @@ export default function RegisterForm() {
 					type='submit'
 					disabled={registerMutation.isLoading}
 				>
-					{registerMutation.isLoading ? 'Sending...' : 'Sign Up'}
+					{registerMutation.isLoading ? t('SigningUp') : t('SignUp')}
 				</Button>
 			</form>
 		</>

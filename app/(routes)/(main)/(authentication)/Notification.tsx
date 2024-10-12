@@ -1,7 +1,8 @@
 import React from 'react'
-import { toast, ToastOptions } from 'react-toastify'
+import { ToastContentProps, toast, ToastOptions } from 'react-toastify'
 import Link from 'next/link'
-import { AUTHENTICATION_ROUTE } from '@/app/_config/constants/variables'
+import { AUTHENTICATION_ROUTE, SHOP_ROUTE } from '@/app/_configs/constants/variables'
+import { useTranslations } from 'next-intl'
 
 export const notifyRegisterSuccess = (options?: ToastOptions) => {
 	toast.success(<RegisterSuccessMessage />, {
@@ -45,28 +46,34 @@ export const notifySendEmailFail = (errorMessage?: string) => {
 	})
 }
 
-const RegisterSuccessMessage = () => (
-	<div className='flex flex-col gap-[4px] pl-compact pr-common text-body-sm'>
-		<h3 className='capitalize text-primary-625'>Registered Successfully</h3>
-		<p>
-			Moving to the{' '}
-			<Link
-				replace
-				href={AUTHENTICATION_ROUTE.LOGIN.LINK}
-				className='hover:font-bold'
-			>
-				Login Page
-			</Link>
-		</p>
-	</div>
-)
+const RegisterSuccessMessage = () => {
+	const t = useTranslations('RegisterSuccessMessage')
+	return (
+		<div className='flex flex-col gap-[4px] pl-compact pr-common text-body-sm'>
+			<h3 className='capitalize text-primary-625'>{t('Title')}</h3>
+			<p>
+				{t('Moving')}{' '}
+				<Link
+					replace
+					href={AUTHENTICATION_ROUTE.LOGIN.LINK}
+					className='hover:font-bold'
+				>
+					{t('LoginPage')}
+				</Link>
+			</p>
+		</div>
+	)
+}
 
-const LoginSuccessMessage = () => (
-	<div className='flex flex-col gap-[4px] pl-compact pr-common text-body-sm'>
-		<h3 className='capitalize text-primary-625'>Login Successfully</h3>
-		<p>Glad to have you back!</p>
-	</div>
-)
+const LoginSuccessMessage = () => {
+	const t = useTranslations('LoginSuccessMessage')
+	return (
+		<div className='flex flex-col gap-[4px] pl-compact pr-common text-body-sm'>
+			<h3 className='capitalize text-primary-625'>{t('Title')}</h3>
+			<p>{t('Description')}</p>
+		</div>
+	)
+}
 const RegisterErrorMessage = ({ message }: { message?: string }) => (
 	<div className='flex flex-col gap-[4px] pl-compact pr-common text-body-sm'>
 		<h3 className='capitalize text-status-error'>{message ? message : 'Registered Failed'}</h3>
@@ -79,21 +86,24 @@ const LoginErrorMessage = ({ message }: { message?: string }) => (
 	</div>
 )
 
-const ResetPasswordSuccessMessage = () => (
-	<div className='flex flex-col gap-[4px] pl-compact pr-common text-body-sm'>
-		<h3 className='capitalize text-primary-625'>Your Password Has Been Successfully Reset!</h3>
-		<p>
-			Let&apos;{' '}
-			<Link
-				replace
-				href={AUTHENTICATION_ROUTE.LOGIN.LINK}
-				className='hover:font-bold'
-			>
-				Login Now!
-			</Link>
-		</p>
-	</div>
-)
+const ResetPasswordSuccessMessage = () => {
+	const t = useTranslations('ResetPasswordSuccessMessage')
+	return (
+		<div className='flex flex-col gap-[4px] pl-compact pr-common text-body-sm'>
+			<h3 className='capitalize text-primary-625'>{t('Title')}</h3>
+			<p>
+				{t('Let')}{' '}
+				<Link
+					replace
+					href={AUTHENTICATION_ROUTE.LOGIN.LINK}
+					className='hover:font-bold'
+				>
+					{t('LoginNow')}
+				</Link>
+			</p>
+		</div>
+	)
+}
 const ResetPasswordErrorMessage = ({ message }: { message?: string }) => (
 	<div className='flex flex-col gap-[4px] pl-compact pr-common text-body-sm'>
 		{message ? (

@@ -1,28 +1,31 @@
-import { AUTHENTICATION_ROUTE } from '@/app/_config/constants/variables'
+import { AUTHENTICATION_ROUTE } from '@/app/_configs/constants/variables'
 import RegisterForm from './RegisterForm'
 import Link from 'next/link'
+import { useTranslations } from 'next-intl'
 
 export default function RegisterPage() {
+	const t = useTranslations('RegisterPage')
 	return (
 		<>
 			<div className='flex-col-start gap-common'>
 				<div>
 					<span className='mb-compact block text-body-lg'>
-						Welcome to <span className=' text-heading-2 font-bold'>GreenDeco</span> 👋
+						{t('Welcome')} <span className=' text-heading-2 font-bold'>GreenDeco</span>{' '}
+						👋
 					</span>
 					<div className='flex-col-start gap-[4px]'>
-						<h1>Create An Account</h1>
-						<p className='text-body-md'>Become one of the plant lovers now!</p>
+						<h1>{t('Title')}</h1>
+						<p className='text-body-md'>{t('Description')}</p>
 					</div>
 				</div>
 				<RegisterForm />
 				<span className='text-center text-body-md'>
-					Don&apos;t you have an account?{' '}
+					{t('HaveAccount')}{' '}
 					<Link
 						replace
 						href={AUTHENTICATION_ROUTE.LOGIN.LINK}
 					>
-						Sign In
+						{t('SignIn')}
 					</Link>
 				</span>
 			</div>

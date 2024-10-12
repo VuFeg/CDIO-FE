@@ -1,6 +1,6 @@
+import { useDialogStore } from '@/app/_configs/store/useDialogStore'
 import React from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { useDialogStore } from '@/app/_config/store/useDialogStore'
 
 export default function ModalProvider({ children }: { children: React.ReactNode }) {
 	const { activeDialog } = useDialogStore()

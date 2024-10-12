@@ -3,8 +3,8 @@
 import { MagnifyingGlassIcon } from '@heroicons/react/24/solid'
 import { useRef, useState } from 'react'
 import { motion, useScroll, useMotionValueEvent, AnimatePresence } from 'framer-motion'
-import useClickOutside from '@/app/_hooks/useClickOutside'
 import ProductSearchForm from '../search/ProductSearchForm'
+import useClickOutside from '@/app/_hooks/useClickOutside'
 
 export default function SearchDisplayButton() {
 	const [open, setOpen] = useState(false)

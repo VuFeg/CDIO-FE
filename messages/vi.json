@@ -1,0 +1,367 @@
+{
+	"LoginPage": {
+		"Welcome": "Chào mừng trở lại với",
+		"Title": "Đăng nhập tài khoản",
+		"Description": "Bắt đầu mua sắm bằng cách đăng nhập vào tài khoản của bạn!",
+		"DontHaveAccount": "Bạn chưa có tài khoản?",
+		"SignUp": "Đăng ký"
+	},
+	"LoginForm": {
+		"EmailLabel": "Email",
+		"PasswordLabel": "Mật khẩu",
+		"EmailPlaceholder": "Email của bạn",
+		"PasswordPlaceholder": "Mật khẩu",
+		"ForgotPassword": "Quên mật khẩu?",
+		"SignIn": "Đăng nhập",
+		"SigningIn": "Đang đăng nhập..."
+	},
+	"RegisterPage": {
+		"Welcome": "Chào mừng đến với",
+		"Title": "Tạo tài khoản",
+		"Description": "Trở thành một trong những người yêu cây ngay bây giờ!",
+		"HaveAccount": "Bạn đã có tài khoản?",
+		"SignIn": "Đăng nhập"
+	},
+	"RegisterForm": {
+		"FirstNameLabel": "Tên",
+		"FirstNamePlaceholder": "Tên",
+		"LastNameLabel": "Họ",
+		"LastNamePlaceholder": "Họ",
+		"EmailLabel": "Email",
+		"EmailPlaceholder": "Email của bạn",
+		"PhoneNumberLabel": "Số điện thoại",
+		"PhoneNumberPlaceholder": "Số điện thoại",
+		"PasswordLabel": "Mật khẩu",
+		"PasswordPlaceholder": "Mật khẩu",
+		"ConfirmPasswordLabel": "Xác nhận mật khẩu",
+		"ConfirmPasswordPlaceholder": "Xác nhận mật khẩu",
+		"SignUp": "Đăng ký",
+		"SigningUp": "Đang đăng ký..."
+	},
+	"ForgotPasswordPage": {
+		"Title": "Quên mật khẩu",
+		"Description": "Để lấy lại quyền truy cập và đặt lại mật khẩu của bạn, hãy nhập email đã đăng ký.",
+		"HaveAccount": "Bạn đã nhớ mật khẩu?",
+		"SignInNow": "Đăng nhập ngay!"
+	},
+	"ForgotPasswordForm": {
+		"EmailLabel": "Email",
+		"EmailPlaceholder": "Email của bạn",
+		"SendEmail": "Gửi email",
+		"SendingEmail": "Đang gửi email..."
+	},
+	"EmailSentPage": {
+		"Title": "Email của bạn đã được gửi ✅",
+		"Description": "Vui lòng kiểm tra hộp thư của bạn để nhận liên kết đặt lại mật khẩu."
+	},
+	"ResetPasswordPage": {
+		"Title": "Đặt lại mật khẩu",
+		"Description": "Nhập mật khẩu mới của bạn."
+	},
+	"ResetPasswordForm": {
+		"NewPasswordLabel": "Mật khẩu mới",
+		"NewPasswordPlaceholder": "Mật khẩu mới của bạn",
+		"ConfirmNewPasswordLabel": "Xác nhận mật khẩu mới",
+		"ConfirmNewPasswordPlaceholder": "Xác nhận mật khẩu mới của bạn",
+		"ResetPassword": "Đặt lại mật khẩu",
+		"Sending": "Đang gửi..."
+	},
+	"AdminLoginPage": {
+		"Title": "Quản trị",
+		"SignIn": "Đăng nhập"
+	},
+	"AdminLoginForm": {
+		"EmailLabel": "Email",
+		"EmailPlaceholder": "Email quản trị viên",
+		"PasswordLabel": "Mật khẩu",
+		"PasswordPlaceholder": "Mật khẩu",
+		"SignIn": "Đăng nhập",
+		"Sending": "Đang gửi..."
+	},
+	"HeroSection": {
+		"Title": "Chào mừng đến với GreenDeco",
+		"Description": "Một chậu cây xinh đẹp giống như có một người bạn ở bên cạnh",
+		"ShopNow": "Mua ngay",
+		"Products": "Cây xanh đang chờ đợi để trở thành bạn của bạn"
+	},
+	"BuyingProcess": {
+		"Title": "Sở hữu cây của riêng bạn với 5 bước đơn giản",
+		"Step1": "chọn cây của bạn",
+		"Step2": "chọn màu chậu",
+		"Step3": "thêm vào giỏ hàng",
+		"Step4": "vận chuyển đến bạn",
+		"Step5": "chăm sóc và ngắm nhìn"
+	},
+	"FeaturedProduct": {
+		"NewType": "new",
+		"NewLabel": "Mới ra mắt",
+		"TopRatedType": "rated",
+		"TopRatedLabel": "Đánh giá cao",
+		"CheapType": "cheap",
+		"CheapLabel": "Thân thiện",
+		"ShopAll": "Xem tất cả"
+	},
+	"WhyChooseUs": {
+		"HandPlatedTitle": "trồng thủ công",
+		"HandPlantedParagraph": "Những chậu cây xinh xắn này được trồng trong đất hữu cơ với hướng dẫn dễ dàng.",
+		"EasyCareTitle": "dễ chăm sóc",
+		"EasyCareParagraph": "Chúng không hề cầu kỳ và sẽ phát triển mạnh mẽ trong nhiều năm với ánh sáng mạnh hoặc ánh sáng tự nhiên.",
+		"FascinatingTitle": "độc đáo",
+		"FascinatingParagraph": "Chúng tôi bán những loại cây xanh có hình dạng, màu sắc và kết cấu độc đáo.",
+		"Title": "Tại sao chọn chúng tôi?",
+		"Description": "Chúng tôi biết bạn yêu cây cối đến nhường nào và hơn thế nữa, chúng tôi hiểu bạn cẩn trọng ra sao để chăm sóc chúng một cách chu đáo."
+	},
+	"SizeFeature": {
+		"SmallLabel": "Nhỏ",
+		"MediumLabel": "Vừa",
+		"LargeLabel": "Lớn",
+		"ExtraLargeLabel": "Cực lớn",
+		"SmallSize": "S",
+		"MediumSize": "M",
+		"LargeSize": "L",
+		"ExtraLargeSize": "XL",
+		"Title": "Có nhiều kích cỡ khác nhau!",
+		"Description": "Chúng tôi có thể cung cấp cho bạn nhiều loại cây đẹp với kích thước đa dạng. Bất kỳ loại cây nào, dù lớn hay nhỏ, đều sẵn sàng làm bạn với bạn.",
+		"ViewMore": "Xem thêm"
+	},
+	"CustomerReviews": {
+		"Title": "Rất nhiều tình cảm từ khách hàng của chúng tôi 😍"
+	},
+	"TopReviewSlider": {},
+	"FooterHeading": {
+		"Title": "Đơn giản. Đam mê. Tiện dụng.",
+		"Description": "“Cây xanh cho chúng ta oxy cho phổi và cho tâm hồn.”",
+		"Author": "– Linda Solegato",
+		"ShopAllPlant": "Mua tất cả cây",
+		"AboutUs": "Về chúng tôi"
+	},
+	"FooterContact": {
+		"CopyRight": "© 2024 DNDTU GreenDeco. Bảo lưu mọi quyền."
+	},
+	"HeaderNavigation": {
+		"Plants": "Cây xanh",
+		"AboutUs": "Về chúng tôi"
+	},
+	"ProductSearchForm": {
+		"Title": "Bạn đang nghĩ gì?",
+		"SearchPlaceholder": "Tìm kiếm cây xanh",
+		"Search": "Tìm kiếm",
+		"SearchDescription": "* Phải chứa ít nhất 3 ký tự và CHỈ chứa ký tự"
+	},
+	"Cart": {
+		"Title": "Giỏ hàng của bạn",
+		"Description": "Tất cả những lựa chọn tốt nhất của bạn.",
+		"ContinueShopping": "Tiếp tục mua sắm",
+		"EmptyCart": "Có vẻ như không có sản phẩm nào trong giỏ hàng của bạn..."
+	},
+	"CartList": {
+		"Clear": "Xóa"
+	},
+	"CartCalculator": {
+		"Subtotal": "Tổng phụ:",
+		"Checkout": "Thanh toán"
+	},
+	"NotificationList": {
+		"Empty": "Không có thông báo mới",
+		"MostRecent": "Gần đây nhất"
+	},
+	"LoginSuccessMessage": {
+		"Title": "Đăng nhập thành công",
+		"Description": "Rất vui được gặp lại bạn!"
+	},
+	"RegisterSuccessMessage": {
+		"Title": "Đăng ký thành công",
+		"Moving": "Chuyển đến",
+		"LoginPage": "Trang đăng nhập"
+	},
+	"ResetPasswordSuccessMessage": {
+		"Title": "Mật khẩu của bạn đã được đặt lại thành công!",
+		"Let": "Hãy",
+		"LoginNow": "Đăng nhập ngay"
+	},
+	"NotificationDisplayButton": {
+		"Notification": "Thông báo"
+	},
+	"UserSettingMenu": {
+		"UserSetting": "cài đặt người dùng",
+		"Logout": "đăng xuất"
+	},
+	"DetailContainer": {
+		"Variants": "Màu chậu",
+		"Description": "Mô tả",
+		"Size": "Kích thước",
+		"CaringDifficulty": "Độ khó chăm sóc",
+		"IdealLightConditions": "Điều kiện ánh sáng lý tưởng",
+		"WateringRoutine": "Lịch tưới nước"
+	},
+	"ReviewSection": {
+		"Title": "Bình luận & Đánh giá"
+	},
+	"SortByStarMenu": {
+		"Star": "Sao",
+		"Reset": "Đặt lại"
+	},
+	"ReviewSorter": {
+		"Newest": "Mới nhất",
+		"LowestRated": "Đánh giá thấp nhất",
+		"HighestRated": "Đánh giá cao nhất"
+	},
+	"NoReviewMessage": {
+		"Title": "Không có đánh giá"
+	},
+	"ReviewItem": {
+		"Rated": "Đánh giá"
+	},
+	"UserSidebarNavigation": {
+		"AccountSettings": "Cài đặt tài khoản",
+		"OrderList": "Danh sách đơn hàng",
+		"PurchasedProducts": "Sản phẩm đã mua"
+	},
+	"UserProfilePage": {
+		"AccountPreference": "Tùy chọn tài khoản"
+	},
+	"UserProfileForm": {
+		"FirstNameLabel": "Tên",
+		"FirstNamePlaceholder": "Tên",
+		"LastNameLabel": "Họ",
+		"LastNamePlaceholder": "Họ",
+		"EmailLabel": "Email",
+		"EmailPlaceholder": "Email của bạn",
+		"PhoneNumberLabel": "Số điện thoại",
+		"PhoneNumberPlaceholder": "Số điện thoại",
+		"Edit": "Chỉnh sửa",
+		"Cancel": "Hủy"
+	},
+	"UserAvatar": {
+		"ChangeAvatar": "Thay đổi ảnh đại diện",
+		"Remove": "Xóa"
+	},
+	"UserOrderListPageLayout": {
+		"Title": "Danh sách đơn hàng"
+	},
+	"OrderSortMenu": {
+		"SortBy": "Sắp xếp theo:"
+	},
+	"DefaultSortMenu": {
+		"Newest": "Mới nhất",
+		"Oldest": "Cũ nhất"
+	},
+	"NoItemFoundMessage": {
+		"Title": "Không có sẵn"
+	},
+	"OrderStateFilterMenu": {
+		"All": "Tất cả",
+		"Draft": "Nháp",
+		"Processing": "Đang xử lý",
+		"Completed": "Hoàn thành",
+		"Cancelled": "Đã hủy"
+	},
+	"UserPurchasedProductPageLayout": {
+		"Title": "Sản phẩm đã mua",
+		"Description": "Nơi bạn có thể xem lại hoặc đánh giá những lựa chọn tốt nhất của mình"
+	},
+	"UserReviewPage": {
+		"Title": "Không có sẵn"
+	},
+	"OrderItem": {
+		"OrderID": "Mã đơn hàng: ",
+		"Draft": "Nháp",
+		"Processing": "Đang xử lý",
+		"Completed": "Hoàn thành",
+		"Cancelled": "Đã hủy",
+		"View": "Xem"
+	},
+	"ItemButtons": {
+		"Review": "Đánh giá",
+		"View": "Xem"
+	},
+	"ShippingDetailForm": {
+		"Title": "Thông tin giao hàng",
+		"CityLabel": "Thành phố",
+		"CityPlaceholder": "Thành phố",
+		"DistrictLabel": "Quận/Huyện",
+		"DistrictPlaceholder": "Quận/Huyện",
+		"WardLabel": "Phường/Xã",
+		"WardPlaceholder": "Phường/Xã",
+		"AddressLabel": "Địa chỉ",
+		"AddressPlaceholder": "Địa chỉ",
+		"PlaceOrder": "Đặt hàng",
+		"Processing": "Đang xử lý..."
+	},
+	"PaymentGuide": {
+		"Title": "Đây là mã đơn hàng của bạn:",
+		"Description": "Bạn có thể thanh toán ngay bây giờ hoặc sau đó trong danh sách đơn hàng",
+		"Content1": "Vui lòng hoàn thành thanh toán trong vòng ",
+		"Content2": "10 ngày",
+		"Content3": " hoặc đơn hàng này sẽ bị ",
+		"Content4": "hủy",
+		"Notification": "Đơn hàng của bạn sẽ được cập nhật trong vòng 24 giờ sau khi chúng tôi nhận được tiền của bạn.",
+		"BackToShopping": "Quay lại mua sắm",
+		"ViewOrderList": "Xem danh sách đơn hàng"
+	},
+	"PaymentPage": {
+		"Title": "Cảm ơn bạn đã mua sắm tại GreenDeco",
+		"PaymentSuccessful": "Thanh toán thành công!",
+		"PaymentUnsuccessful": "Thanh toán không thành công!",
+		"ThankYou": "Cảm ơn bạn đã lựa chọn chúng tôi",
+		"Description": "Đừng lo lắng, bạn có thể thử lại sau trong chi tiết đơn hàng",
+		"BackToShopping": "Quay lại mua sắm",
+		"ViewOrderList": "Xem danh sách đơn hàng"
+	},
+	"PaymentInformation": {
+		"AccountNumber": "Số tài khoản: ",
+		"AccountOwnerName": "Tên chủ tài khoản: ",
+		"Bank": "Ngân hàng: ",
+		"TransactionContent": "Nội dung giao dịch:"
+	},
+	"ManageProductLayout": {
+		"Title": "Đơn hàng đã được đặt thành công!"
+	},
+	"AuthenticationLayout": {
+		"BackToShopping": "Quay lại mua sắm",
+		"English": "Tiếng Anh",
+		"Vietnamese": "Tiếng Việt"
+	},
+	"OrderDetail": {
+		"OrderInfo": "Thông tin đơn hàng",
+		"ProceedToPayment": "Tiến hành thanh toán",
+		"ID": "Mã đơn hàng:",
+		"DateCreated": "Ngày tạo:",
+		"OrderStatus": "Trạng thái đơn hàng:",
+		"Draft": "Nháp",
+		"Processing": "Đang xử lý",
+		"Completed": "Hoàn thành",
+		"Cancelled": "Đã hủy",
+		"PaymentStatus": "Trạng thái thanh toán:",
+		"PaymentPending": "Chờ thanh toán",
+		"PaymentReceived": "Đã nhận thanh toán"
+	},
+	"CustomerAndShippingDetail": {
+		"Customer": "Khách hàng",
+		"ShippingAddress": "Địa chỉ giao hàng"
+	},
+	"OrderDetailContainer": {
+		"Cancel": "Lý do hủy: ",
+		"Failed": "Thất bại"
+	},
+	"OrderPrice": {
+		"CouponCode": "Mã giảm giá:",
+		"Discount": "Giảm giá",
+		"Total": "Tổng cộng:"
+	},
+	"OrderDetailPage": {
+		"BackToOrderList": "Quay lại danh sách đơn hàng"
+	},
+	"CreateReviewForm": {
+		"Rating": "Đánh giá",
+		"CommentLabel": "Bình luận",
+		"CommentPlaceholder": "Để lại bình luận của bạn ở đây",
+		"Cancel": "Hủy",
+		"SendReview": "Gửi đánh giá",
+		"Sending": "Đang gửi..."
+	},
+	"LanguageDisplayButton": {
+		"Vietnamese": "Tiếng Việt",
+		"English": "Tiếng Anh"
+	}
+}

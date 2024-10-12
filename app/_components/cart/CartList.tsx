@@ -2,8 +2,10 @@ import { useCartMutation, CartListFullDetail } from '@/app/_hooks/useCart'
 import CartItem from './CartItem'
 import Button from '../Button'
 import { getCookie } from 'cookies-next'
+import { useTranslations } from 'next-intl'
 
 export function CartList(props: CartListFullDetail) {
+	const t = useTranslations('CartList')
 	const { items } = props
 	const { clearCartItem } = useCartMutation()
 
@@ -18,7 +20,7 @@ export function CartList(props: CartListFullDetail) {
 				onClick={() => handleClearCart()}
 				className='w-fit self-end rounded-none border-none bg-transparent p-0 text-body-sm font-medium text-primary-418 hover:font-semi-bold hover:underline'
 			>
-				Clear
+				{t('Clear')}
 			</Button>
 			<ul className='flex-col-start max-h-full divide-y divide-primary-5555-20  py-cozy '>
 				{items.map((item) => (

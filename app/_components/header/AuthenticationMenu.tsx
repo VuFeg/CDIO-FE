@@ -2,18 +2,19 @@
 
 import Image from 'next/image'
 import { motion, useScroll, useMotionValueEvent, AnimatePresence } from 'framer-motion'
+import { UserProfileResponseData, getUserProfile } from '@/app/_api/axios/user'
+import { ACCESS_TOKEN_COOKIE_NAME } from '@/app/_configs/constants/cookies'
+import { UseQueryKeys } from '@/app/_configs/constants/queryKey'
 import { ArrowLeftOnRectangleIcon, ChevronDownIcon, Cog8ToothIcon } from '@heroicons/react/24/solid'
 import { useQuery, useQueryClient } from '@tanstack/react-query'
 import { deleteCookie, getCookie } from 'cookies-next'
 import Button from '../Button'
 import { useRouter } from 'next/navigation'
+import { DEFAULT_AVATAR } from '@/app/_configs/constants/images'
 import React, { useRef, useState } from 'react'
 import clsx from 'clsx'
 import useClickOutside from '@/app/_hooks/useClickOutside'
-import { DEFAULT_AVATAR } from '@/app/_config/constants/images'
-import { ACCESS_TOKEN_COOKIE_NAME } from '@/app/_config/constants/cookies'
-import { UseQueryKeys } from '@/app/_config/constants/queryKey'
-import { getUserProfile, UserProfileResponseData } from '@/app/_api/axios/user'
+import { useTranslations } from 'next-intl'
 
 export default function AuthenticationHandler() {
 	const accessToken = getCookie(ACCESS_TOKEN_COOKIE_NAME)
@@ -43,6 +44,7 @@ export default function AuthenticationHandler() {
 }
 
 function UserSettingMenu(props: UserProfileResponseData) {
+	const t = useTranslations('UserSettingMenu')
 	const [isOpen, setIsOpen] = useState(false)
 	const queryClient = useQueryClient()
 	const settingMenuRef = useRef<any>()
@@ -93,13 +95,13 @@ function UserSettingMenu(props: UserProfileResponseData) {
 						<MenuItem onClick={() => router.push('/user/setting/profile')}>
 							<div className='flex h-full w-full items-center gap-compact'>
 								<Cog8ToothIcon className='aspect-square h-[16px]' />
-								user setting
+								{t('UserSetting')}
 							</div>
 						</MenuItem>
 						<MenuItem onClick={() => handleLogOut()}>
 							<div className='flex h-full w-full items-center gap-compact'>
 								<ArrowLeftOnRectangleIcon className='aspect-square h-[16px]' />
-								log out
+								{t('Logout')}
 							</div>
 						</MenuItem>
 					</motion.ul>

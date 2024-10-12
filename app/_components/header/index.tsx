@@ -3,12 +3,14 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import BrandLogoSmall from '@/public/BrandLogoSmall.svg'
+import AuthenticationHandler from './AuthenticationMenu'
+import CartDisplayButton from './CartDisplayButton'
 import { motion, useScroll, useMotionValueEvent } from 'framer-motion'
 import { useState } from 'react'
-import AuthenticationHandler from './AuthenticationMenu'
-import SearchDisplayButton from './SearchDisplayButton'
-import CartDisplayButton from './CartDisplayButton'
 import NotificationDisplayButton from './NotificationButton'
+import SearchDisplayButton from './SearchDisplayButton'
+import { useTranslations } from 'next-intl'
+import { LanguageDisplayButton } from './LanguageDisplayButton'
 
 export default function Header() {
 	const [hidden, setHidden] = useState(false)
@@ -68,6 +70,7 @@ function NavBar() {
 					<SearchDisplayButton />
 					<CartDisplayButton />
 					<NotificationDisplayButton />
+					<LanguageDisplayButton />
 				</div>
 			</div>
 		</div>
@@ -75,6 +78,7 @@ function NavBar() {
 }
 
 function NavigationList() {
+	const t = useTranslations('HeaderNavigation')
 	return (
 		<ul className='flex list-none text-body-sm text-primary-625'>
 			<li>
@@ -82,7 +86,7 @@ function NavigationList() {
 					href={'/shop'}
 					className='px-cozy text-primary-625'
 				>
-					Plants
+					{t('Plants')}
 				</Link>
 			</li>
 			<li>
@@ -90,7 +94,7 @@ function NavigationList() {
 					href={'/'}
 					className='px-cozy text-primary-625'
 				>
-					About Us
+					{t('AboutUs')}
 				</Link>
 			</li>
 		</ul>

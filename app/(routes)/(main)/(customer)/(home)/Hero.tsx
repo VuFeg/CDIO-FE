@@ -1,9 +1,12 @@
+import { SHOP_ROUTE } from '@/app/_configs/constants/variables'
 import Link from 'next/link'
 import Image from 'next/image'
 import HeroImage from '@/app/_assets/images/homepage/hero.png'
 import PlantIcon from '@/app/_assets/images/homepage/plant.svg'
-import { SHOP_ROUTE } from '@/app/_config/constants/variables'
+import { useTranslations } from 'next-intl'
+
 export default function Hero() {
+	const t = useTranslations('HeroSection')
 	return (
 		<section className='h-screen w-full bg-primary-5555-20/40'>
 			<div className='container h-full'>
@@ -11,16 +14,16 @@ export default function Hero() {
 					<div className='col-span-4 flex items-center justify-center px-comfortable'>
 						<div className='flex-col-start gap-cozy'>
 							<h1 className='text-heading-1 font-semi-bold uppercase text-primary-418-80'>
-								Welcome to GreenDeco
+								{t('Title')}
 							</h1>
 							<p className='text-[4.4rem] font-bold capitalize text-primary-5555'>
-								A beautiful plant is like having a friend around the house
+								{t('Description')}
 							</p>
 							<Link
 								href={SHOP_ROUTE.SHOP_LIST.LINK}
 								className='btn w-fit px-comfortable'
 							>
-								Shop now
+								{t('ShopNow')}
 							</Link>
 						</div>
 					</div>
@@ -41,7 +44,7 @@ export default function Hero() {
 										+100
 									</span>
 									<p className='text-body-md font-semi-bold capitalize text-primary-418-60'>
-										Greenery Waiting to be your friend
+										{t('Products')}
 									</p>
 								</div>
 							</div>

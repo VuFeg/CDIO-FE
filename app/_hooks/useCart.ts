@@ -14,15 +14,15 @@ import {
 import { VariantData, getVariantById } from '../_api/axios/product'
 import { getCookie } from 'cookies-next'
 import { useQueryClient, useMutation, useQuery } from '@tanstack/react-query'
+import { ACCESS_TOKEN_COOKIE_NAME } from '../_configs/constants/cookies'
 import { AxiosError } from 'axios'
 import { AccessTokenType } from '../_types'
 import { CartItemData } from '../_api/axios/cart'
 import { setCookie } from 'cookies-next'
 import { useRouter } from 'next/navigation'
 import useCartDialog from './dialog/useCartDialog'
-import { CONFLICT_STATUS, NOT_FOUND_STATUS, UNAUTHORIZE_STATUS } from '../_config/constants/status'
-import { ACCESS_TOKEN_COOKIE_NAME } from '../_config/constants/cookies'
-import { UseQueryKeys } from '../_config/constants/queryKey'
+import { CONFLICT_STATUS, NOT_FOUND_STATUS, UNAUTHORIZE_STATUS } from '../_configs/constants/status'
+import { UseQueryKeys } from '../_configs/constants/queryKey'
 
 export type CartItemWithFullVariantInfo = {
 	id: CartItemData['id']

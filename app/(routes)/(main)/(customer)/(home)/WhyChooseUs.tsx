@@ -2,6 +2,7 @@ import Image from 'next/image'
 import HandPlantedIcon from '@/app/_assets/images/homepage/whychooseus/handplant.svg'
 import EasyCareIcon from '@/app/_assets/images/homepage/whychooseus/easycare.svg'
 import FascinatingIcon from '@/app/_assets/images/homepage/whychooseus/fascinating.svg'
+import { useTranslations } from 'next-intl'
 
 type ReasonType = {
 	title: string
@@ -9,25 +10,25 @@ type ReasonType = {
 	icon: any
 }
 
-const reasons: ReasonType[] = [
-	{
-		title: 'hand plated',
-		paragraph: 'These lovely plants can be planted in organic soil with easy guide.',
-		icon: HandPlantedIcon,
-	},
-	{
-		title: 'easy care',
-		paragraph:
-			'They aren’t fussy and will thrive for years with bright light or natural light.',
-		icon: EasyCareIcon,
-	},
-	{
-		title: 'fascinating',
-		paragraph: 'We sell these greenery that have unique shapes, colors and texture.',
-		icon: FascinatingIcon,
-	},
-]
 export default function WhyChooseUs() {
+	const t = useTranslations('WhyChooseUs')
+	const reasons: ReasonType[] = [
+		{
+			title: t('HandPlatedTitle'),
+			paragraph: t('HandPlantedParagraph'),
+			icon: HandPlantedIcon,
+		},
+		{
+			title: t('EasyCareTitle'),
+			paragraph: t('EasyCareParagraph'),
+			icon: EasyCareIcon,
+		},
+		{
+			title: t('FascinatingTitle'),
+			paragraph: t('FascinatingParagraph'),
+			icon: FascinatingIcon,
+		},
+	]
 	return (
 		<section className='p-[80px]'>
 			<div className='container'>
@@ -39,13 +40,8 @@ export default function WhyChooseUs() {
 					</div>
 					<div className='flex-col-start gap-comfortable'>
 						<div>
-							<h2 className='mb-cozy text-heading text-primary-625'>
-								Why Choose Us?
-							</h2>
-							<p className='text-body-md text-primary-418-80'>
-								We know how much you love plants and even more, how wary you are to
-								nurture them with full care.
-							</p>
+							<h2 className='mb-cozy text-heading text-primary-625'>{t('Title')}</h2>
+							<p className='text-body-md text-primary-418-80'>{t('Description')}</p>
 						</div>
 						<ul className='flex-col-start gap-cozy'>
 							{reasons.map((reason) => (

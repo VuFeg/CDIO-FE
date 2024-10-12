@@ -45,6 +45,7 @@ type CreateVariantData = {
 	description: string
 	currency: string
 	is_default: boolean
+	quantity: number
 }
 type UpdateVariantData = {
 	id: string
@@ -58,6 +59,7 @@ type UpdateVariantData = {
 	description: string
 	currency: string
 	is_default: boolean
+	quantity: number
 }
 
 type CreateProductRequestData = {

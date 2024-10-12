@@ -1,5 +1,6 @@
 'use client'
 
+import { all } from 'axios'
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 
 export default function useQueryParams<T>() {

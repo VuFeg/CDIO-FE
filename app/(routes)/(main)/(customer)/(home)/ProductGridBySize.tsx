@@ -1,8 +1,9 @@
 import { getProductList } from '@/app/_api/axios/product'
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton'
+import ProductCarousel from '@/app/_components/product/ProductCarousel'
+import { UseQueryKeys } from '@/app/_configs/constants/queryKey'
 import { useQuery } from '@tanstack/react-query'
 import ProductCardsGrid from '@/app/_components/product/ProductGrid'
-import { UseQueryKeys } from '@/app/_config/constants/queryKey'
 
 export default function ProductGridBySize({ size }: { size: 'S' | 'M' | 'L' | 'XL' }) {
 	const featureProductQuery = useQuery({

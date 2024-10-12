@@ -1,5 +1,11 @@
 import axios, { AxiosError } from 'axios'
+import { CartInfoData } from './cart'
+import { headers } from 'next/dist/client/components/headers'
 import { getCookie } from 'cookies-next'
+import {
+	ACCESS_TOKEN_COOKIE_NAME,
+	ADMIN_ACCESS_TOKEN_COOKIE_NAME,
+} from '@/app/_configs/constants/cookies'
 import { UserProfileResponseData } from './user'
 import {
 	FilterParams,
@@ -7,10 +13,9 @@ import {
 	VariantData,
 	fieldJSONParse,
 	getProductBaseById,
+	getProductDetailById,
 } from './product'
-import { CartInfoData } from './cart'
-import { ACCESS_TOKEN_COOKIE_NAME } from '@/app/_config/constants/cookies'
-import { BAD_REQUEST_STATUS } from '@/app/_config/constants/status'
+import { BAD_REQUEST_STATUS } from '@/app/_configs/constants/status'
 
 const ORDER_URL = `${process.env.NEXT_PUBLIC_GREENDECO_BACKEND_API}/order`
 

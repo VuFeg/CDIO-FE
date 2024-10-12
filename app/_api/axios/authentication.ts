@@ -1,3 +1,4 @@
+import { LoginFormInputType } from '@/app/_configs/schemas/authentication'
 import axios from 'axios'
 
 const AUTHENTICATION_URL = `${process.env.NEXT_PUBLIC_GREENDECO_BACKEND_API}/auth`

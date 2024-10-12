@@ -1,5 +1,5 @@
 import { NotificationData } from '@/app/_api/axios/admin/notification'
-import { USER_SETTING_ROUTE } from '@/app/_config/constants/variables'
+import { USER_SETTING_ROUTE } from '@/app/_configs/constants/variables'
 import formatDate from '@/app/_hooks/useFormatDate'
 import Link from 'next/link'
 

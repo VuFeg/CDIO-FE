@@ -2,8 +2,10 @@
 import Link from 'next/link'
 import ResetPasswordForm from './ResetPasswordForm'
 import { useSearchParams } from 'next/navigation'
+import { useTranslations } from 'next-intl'
 
 export default function ResetPasswordPage() {
+	const t = useTranslations('ResetPasswordPage')
 	const searchParams = useSearchParams()
 	const token = searchParams.get('token')
 
@@ -15,8 +17,8 @@ export default function ResetPasswordPage() {
 			<div className='flex-col-start h-full justify-center gap-common'>
 				<div>
 					<div className='flex-col-start gap-[4px]'>
-						<h1>Reset Password</h1>
-						<p className='text-body-md'>Enter your new password.</p>
+						<h1>{t('Title')}</h1>
+						<p className='text-body-md'>{t('Description')}</p>
 					</div>
 				</div>
 				<ResetPasswordForm resetPasswordToken={token} />

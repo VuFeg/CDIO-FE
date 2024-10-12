@@ -29,6 +29,7 @@ export default function CartItem({ cartItem }: { cartItem: CartItemWithFullVaria
 					>
 						<QuantityController
 							quantity={quantity}
+							variant={variant}
 							decrease={() => changeQuantity.decrease(id, quantity)}
 							increase={() => changeQuantity.increase(id, quantity)}
 						/>

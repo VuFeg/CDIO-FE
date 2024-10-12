@@ -1,10 +1,10 @@
 import { getProductList } from '@/app/_api/axios/product'
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton'
 import ProductCarousel from '@/app/_components/product/ProductCarousel'
+import { UseQueryKeys } from '@/app/_configs/constants/queryKey'
+import { FEATURE_PRODUCT_PARAMS } from '@/app/_configs/constants/variables'
 import { useQuery } from '@tanstack/react-query'
 import { useMemo } from 'react'
-import { FEATURE_PRODUCT_PARAMS } from '@/app/_config/constants/variables'
-import { UseQueryKeys } from '@/app/_config/constants/queryKey'
 
 export default function FeaturedProductCarousel({ type }: { type: 'new' | 'topRated' | 'cheap' }) {
 	const featureProductParams = useMemo(() => FEATURE_PRODUCT_PARAMS, [])

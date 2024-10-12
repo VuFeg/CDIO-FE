@@ -1,32 +1,34 @@
 'use client'
 
 import clsx from 'clsx'
-import { useState } from 'react'
+import { useMemo, useState } from 'react'
 import FeaturedProductCarousel from './FeaturedProductCarousel'
 import Link from 'next/link'
-import { SHOP_ROUTE } from '@/app/_config/constants/variables'
+import { SHOP_ROUTE } from '@/app/_configs/constants/variables'
+import { useTranslations } from 'next-intl'
 
 type FetureOptionType = {
 	type: 'new' | 'topRated' | 'cheap'
 	label: string
 }
 
-const featureOptions: FetureOptionType[] = [
-	{
-		type: 'new',
-		label: 'New Release',
-	},
-	{
-		type: 'topRated',
-		label: 'Top Rated',
-	},
-	{
-		type: 'cheap',
-		label: 'Student Friendly',
-	},
-]
 export default function FeaturedProduct() {
+	const t = useTranslations('FeaturedProduct')
 	const [activeType, setActiveType] = useState<FetureOptionType['type']>('new')
+	const featureOptions: FetureOptionType[] = [
+		{
+			type: t('NewType') as 'new',
+			label: t('NewLabel'),
+		},
+		{
+			type: t('TopRatedType') as 'topRated',
+			label: t('TopRatedLabel'),
+		},
+		{
+			type: t('CheapType') as 'cheap',
+			label: t('CheapLabel'),
+		},
+	]
 
 	return (
 		<section className='section-home min-h-[500px] bg-primary-5555'>
@@ -51,7 +53,7 @@ export default function FeaturedProduct() {
 							href={SHOP_ROUTE.SHOP_LIST.LINK}
 							className='text-body-sm text-neutral-gray-1 underline'
 						>
-							Shop All
+							{t('ShopAll')}
 						</Link>
 					</div>
 					<FeaturedProductCarousel type={activeType} />

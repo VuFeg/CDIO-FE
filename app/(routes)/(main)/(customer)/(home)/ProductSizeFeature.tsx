@@ -3,54 +3,49 @@
 import clsx from 'clsx'
 import { useState } from 'react'
 import Link from 'next/link'
+import { SHOP_ROUTE } from '@/app/_configs/constants/variables'
 import ProductGridBySize from './ProductGridBySize'
-import { SHOP_ROUTE } from '@/app/_config/constants/variables'
+import { useTranslations } from 'next-intl'
 
 type SizeOption = {
 	label: string
 	size: 'S' | 'M' | 'L' | 'XL'
 }
 
-const sizeOptionList: SizeOption[] = [
-	{
-		label: 'Small',
-		size: 'S',
-	},
-	{
-		label: 'Medium',
-		size: 'M',
-	},
-	{
-		label: 'Large',
-		size: 'L',
-	},
-	{
-		label: 'Extra Large',
-		size: 'XL',
-	},
-]
-
 export default function SizeFeature() {
+	const t = useTranslations('SizeFeature')
 	const [activeSize, setActiveSize] = useState<SizeOption['size']>('S')
+	const sizeOptionList: SizeOption[] = [
+		{
+			label: t('SmallLabel'),
+			size: t('SmallSize') as 'S',
+		},
+		{
+			label: t('MediumLabel'),
+			size: t('MediumSize') as 'M',
+		},
+		{
+			label: t('LargeLabel'),
+			size: t('LargeSize') as 'L',
+		},
+		{
+			label: t('ExtraLargeLabel'),
+			size: t('ExtraLargeSize') as 'XL',
+		},
+	]
 
 	return (
 		<section className='section-home flex bg-primary-625-40/50'>
 			<div className='container h-full'>
 				<div className='grid h-full grid-cols-6 gap-comfortable'>
 					<div className=' flex-col-start col-span-2 min-h-[400px] justify-center gap-cozy '>
-						<h2 className='text-[3rem] text-primary-625'>
-							It Comes With Different Sizes!
-						</h2>
-						<p className='text-body-md text-primary-418'>
-							We are able to offer you a wide range of beautiful plants in various
-							sizes. Any tree, no matter how big or small, is willing to be your
-							friend.
-						</p>
+						<h2 className='text-[3rem] text-primary-625'>{t('Title')}</h2>
+						<p className='text-body-md text-primary-418'>{t('Description')}</p>
 						<Link
 							href={SHOP_ROUTE.SHOP_LIST.LINK}
 							className='btn w-fit px-comfortable text-body-sm '
 						>
-							View More
+							{t('ViewMore')}
 						</Link>
 					</div>
 					<div className='col-span-4 h-fit'>

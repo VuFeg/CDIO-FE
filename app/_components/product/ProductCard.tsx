@@ -1,4 +1,6 @@
 import Image from 'next/image'
+import { StarIcon } from '@heroicons/react/24/solid'
+import { ShoppingBagIcon } from '@heroicons/react/24/outline'
 import { ProductData } from '@/app/_api/axios/product'
 import { useRouter } from 'next/navigation'
 

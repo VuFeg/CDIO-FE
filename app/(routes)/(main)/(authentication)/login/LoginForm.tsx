@@ -6,16 +6,18 @@ import { useMutation, useQueryClient } from '@tanstack/react-query'
 import { useForm, SubmitHandler } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import Button from '@/app/_components/Button'
-import { notifyLoginFail, notifyLoginSuccess } from '../Notification'
-import { useRouter } from 'next/navigation'
-import { LoginFormInputType, LoginSchema } from '@/app/_config/schemas/authentication'
-import { ACCESS_TOKEN_COOKIE_NAME } from '@/app/_config/constants/cookies'
-import { setCookie } from '@/app/_hooks/useCookie'
-import { UseQueryKeys } from '@/app/_config/constants/queryKey'
-import { AUTHENTICATION_ROUTE } from '@/app/_config/constants/variables'
+import { LoginFormInputType, LoginSchema } from '@/app/_configs/schemas/authentication'
 import { loginAccount } from '@/app/_api/axios/authentication'
+import { notifyLoginFail, notifyLoginSuccess } from '../Notification'
+import { setCookie } from '@/app/_hooks/useCookie'
+import { ACCESS_TOKEN_COOKIE_NAME } from '@/app/_configs/constants/cookies'
+import { UseQueryKeys } from '@/app/_configs/constants/queryKey'
+import { useRouter } from 'next/navigation'
+import { AUTHENTICATION_ROUTE } from '@/app/_configs/constants/variables'
+import { useTranslations } from 'next-intl'
 
 export default function LoginForm() {
+	const t = useTranslations('LoginForm')
 	const queryClient = useQueryClient()
 	const router = useRouter()
 
@@ -74,8 +76,8 @@ export default function LoginForm() {
 				<div>
 					<TextField
 						type='email'
-						label='Email'
-						placeholder='Your Email'
+						label={t('EmailLabel')}
+						placeholder={t('EmailPlaceholder')}
 						register={register('email')}
 						error={Boolean(errors?.email)}
 						helperText={errors?.email?.message}
@@ -84,8 +86,8 @@ export default function LoginForm() {
 				<div>
 					<TextField
 						type='password'
-						label='Password'
-						placeholder='Password'
+						label={t('PasswordLabel')}
+						placeholder={t('PasswordPlaceholder')}
 						register={register('password')}
 						error={Boolean(errors?.password)}
 						helperText={errors?.password?.message}
@@ -96,14 +98,14 @@ export default function LoginForm() {
 						href={AUTHENTICATION_ROUTE.FORGOT_PASSWORD.LINK}
 						replace
 					>
-						Forgot Password
+						{t('ForgotPassword')}
 					</Link>
 				</div>
 				<Button
 					type='submit'
 					disabled={loginMutation.isLoading}
 				>
-					{loginMutation.isLoading ? 'Signing In...' : 'Sign In'}
+					{loginMutation.isLoading ? t('SigningIn') : t('SignIn')}
 				</Button>
 			</form>
 		</>

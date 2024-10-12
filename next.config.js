@@ -1,4 +1,8 @@
+const createNextIntlPlugin = require('next-intl/plugin')
+
+const withNextIntl = createNextIntlPlugin('./app/_i18n/index.ts')
 /** @type {import('next').NextConfig} */
+
 const nextConfig = {
 	async headers() {
 		return [
@@ -20,6 +24,9 @@ const nextConfig = {
 			},
 		]
 	},
+	experimental: {
+		serverActions: true,
+	},
 	images: {
 		unoptimized: true,
 	},
@@ -34,4 +41,4 @@ const nextConfig = {
 	},
 }
 
-module.exports = nextConfig
+module.exports = withNextIntl(nextConfig)

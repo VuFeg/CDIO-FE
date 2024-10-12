@@ -1,8 +1,9 @@
 import { useQuery } from '@tanstack/react-query'
 import { FilterParams } from '../_api/axios/product'
-import { Sort, SortBy } from '../_config/constants/paramKeys'
-import { UseQueryKeys } from '../_config/constants/queryKey'
+import { UseQueryKeys } from '../_configs/constants/queryKey'
+import { Sort, SortBy } from '../_configs/constants/paramKeys'
 import { getNotificationFromUser } from '../_api/axios/notification'
+import { type } from 'os'
 
 const defaultParams: FilterParams = {
 	limit: 10,

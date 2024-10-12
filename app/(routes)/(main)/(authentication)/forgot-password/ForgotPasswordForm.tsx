@@ -1,6 +1,10 @@
 'use client'
 import { useForm, SubmitHandler } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
+import {
+	ForgotPasswordFormInputType,
+	ForgotPasswordSchema,
+} from '@/app/_configs/schemas/authentication'
 import { useMutation } from '@tanstack/react-query'
 import { sendEmailToResetPassword } from '@/app/_api/axios/authentication'
 import { AxiosError } from 'axios'
@@ -8,13 +12,11 @@ import { notifySendEmailFail } from '../Notification'
 import { TextField } from '@/app/_components/form'
 import Button from '@/app/_components/Button'
 import { useRouter } from 'next/navigation'
-import { AUTHENTICATION_ROUTE } from '@/app/_config/constants/variables'
-import {
-	ForgotPasswordFormInputType,
-	ForgotPasswordSchema,
-} from '@/app/_config/schemas/authentication'
+import { AUTHENTICATION_ROUTE } from '@/app/_configs/constants/variables'
+import { useTranslations } from 'next-intl'
 
 export default function ForgotPasswordForm() {
+	const t = useTranslations('ForgotPasswordForm')
 	const router = useRouter()
 	const defaultInputValues: ForgotPasswordFormInputType = {
 		email: '',
@@ -63,8 +65,8 @@ export default function ForgotPasswordForm() {
 				<div>
 					<TextField
 						type='email'
-						label='Email'
-						placeholder='Your Email'
+						label={t('EmailLabel')}
+						placeholder={t('EmailPlaceholder')}
 						register={register('email')}
 						error={Boolean(errors?.email)}
 						helperText={errors?.email?.message}
@@ -74,7 +76,7 @@ export default function ForgotPasswordForm() {
 					type='submit'
 					disabled={forgotPasswordMutation.isLoading}
 				>
-					{forgotPasswordMutation.isLoading ? 'Sending...' : 'Send Email'}
+					{forgotPasswordMutation.isLoading ? t('SendingEmail') : t('SendEmail')}
 				</Button>
 			</form>
 		</>

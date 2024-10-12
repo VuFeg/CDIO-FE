@@ -1,7 +1,7 @@
 'use client'
 
 import CartDialog from '@/app/_components/cart'
-import { useDialogStore } from '@/app/_config/store/useDialogStore'
+import { useDialogStore } from '@/app/_configs/store/useDialogStore'
 
 export default function useCartDialog() {
 	const { openDialog } = useDialogStore()

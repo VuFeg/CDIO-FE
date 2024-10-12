@@ -2,12 +2,14 @@
 
 import { BellIcon } from '@heroicons/react/24/solid'
 import { useRef, useState } from 'react'
+import useNotification from '@/app/_hooks/useNotification'
 import NotificationList from '../notification/NotificationList'
 import { motion, useScroll, useMotionValueEvent, AnimatePresence } from 'framer-motion'
 import useClickOutside from '@/app/_hooks/useClickOutside'
-import useNotification from '@/app/_hooks/useNotification'
+import { useTranslations } from 'next-intl'
 
 export default function NotificationDisplayButton() {
+	const t = useTranslations('NotificationDisplayButton')
 	const [open, setOpen] = useState(false)
 	const notificationListRef = useRef<any>()
 
@@ -62,7 +64,7 @@ export default function NotificationDisplayButton() {
 							className='absolute right-0 top-[calc(100%+8px)] max-h-[60vh] w-[24vw] overflow-y-auto rounded-xl bg-white shadow-38 '
 						>
 							<div className='bg-primary-625-20/40 p-compact text-heading-3 font-bold text-primary-5555'>
-								Notification
+								{t('Notification')}
 							</div>
 
 							{data && <NotificationList {...data} />}

@@ -1,0 +1,368 @@
+{
+	"LoginPage": {
+		"Welcome": "Welcome back to",
+		"Title": "Login Your Account",
+		"Description": "Start shopping by logging in your account!",
+		"DontHaveAccount": "Don't have an account?",
+		"SignUp": "Sign Up"
+	},
+	"LoginForm": {
+		"EmailLabel": "Email",
+		"PasswordLabel": "Password",
+		"EmailPlaceholder": "Your email",
+		"PasswordPlaceholder": "Password",
+		"ForgotPassword": "Forgot password?",
+		"SignIn": "Sign In",
+		"SigningIn": "Signing in..."
+	},
+	"RegisterPage": {
+		"Welcome": "Welcome to",
+		"Title": "Create An Account",
+		"Description": "Become one of the plant lovers now!",
+		"HaveAccount": "Already have an account?",
+		"SignIn": "Sign In"
+	},
+	"RegisterForm": {
+		"FirstNameLabel": "First Name",
+		"FirstNamePlaceholder": "First Name",
+		"LastNameLabel": "Last Name",
+		"LastNamePlaceholder": "Last Name",
+		"EmailLabel": "Email",
+		"EmailPlaceholder": "Your Email",
+		"PhoneNumberLabel": "Phone Number",
+		"PhoneNumberPlaceholder": "Phone Number",
+		"PasswordLabel": "Password",
+		"PasswordPlaceholder": "Password",
+		"ConfirmPasswordLabel": "Confirm Password",
+		"ConfirmPasswordPlaceholder": "Confirm Password",
+		"SignUp": "Sign Up",
+		"SigningUp": "Signing up..."
+	},
+	"ForgotPasswordPage": {
+		"Title": "Forgot Password",
+		"Description": "To gain access and reset your password, enter your registered email.",
+		"HaveAccount": "Remember your password?",
+		"SignInNow": "Sign In Now!"
+	},
+	"ForgotPasswordForm": {
+		"EmailLabel": "Email",
+		"EmailPlaceholder": "Your Email",
+		"SendEmail": "Send Email",
+		"SendingEmail": "Sending email..."
+	},
+	"EmailSentPage": {
+		"Title": "Your email has been sent ✅",
+		"Description": "Please check your mailbox to receive our password reset link."
+	},
+	"ResetPasswordPage": {
+		"Title": "Reset Password",
+		"Description": "Enter your new password."
+	},
+	"ResetPasswordForm": {
+		"NewPasswordLabel": "New Password",
+		"NewPasswordPlaceholder": "Your new password",
+		"ConfirmNewPasswordLabel": "Confirm New Password",
+		"ConfirmNewPasswordPlaceholder": "Confirm your new password",
+		"ResetPassword": "Reset Password",
+		"Sending": "Sending..."
+	},
+	"AdminLoginPage": {
+		"Title": "Administration",
+		"SignIn": "Sign In"
+	},
+	"AdminLoginForm": {
+		"EmailLabel": "Email",
+		"EmailPlaceholder": "Administrator email",
+		"PasswordLabel": "Password",
+		"PasswordPlaceholder": "Password",
+		"SignIn": "Sign In",
+		"Sending": "Sending..."
+	},
+	"HeroSection": {
+		"Title": "Welcome to GreenDeco",
+		"Description": "A beautiful plant is like having a friend around the house",
+		"ShopNow": "Shop Now",
+		"Products": "Greenery Waiting to be your friend"
+	},
+	"BuyingProcess": {
+		"Title": "Have Your Own Plants With 5 Simple Steps",
+		"Step1": "pick your plants",
+		"Step2": "choose a pot color",
+		"Step3": "put in your cart",
+		"Step4": "have them shipped",
+		"Step5": "watch them grow"
+	},
+	"FeaturedProduct": {
+		"NewType": "new",
+		"NewLabel": "New Release",
+		"TopRatedType": "topRated",
+		"TopRatedLabel": "Top Rated",
+		"CheapType": "cheap",
+		"CheapLabel": "Student Friendly",
+		"ShopAll": "Shop All"
+	},
+	"WhyChooseUs": {
+		"HandPlatedTitle": "hand plated",
+		"HandPlantedParagraph": "These lovely plants can be planted in organic soil with easy guide.",
+		"EasyCareTitle": "easy care",
+		"EasyCareParagraph": "They aren’t fussy and will thrive for years with bright light or natural light.",
+		"FascinatingTitle": "fascinating",
+		"FascinatingParagraph": "We sell these greenery that have unique shapes, colors and texture.",
+		"Title": "Why Choose Us?",
+		"Description": "We know how much you love plants and even more, how wary you are to nurture them with full care."
+	},
+	"SizeFeature": {
+		"SmallLabel": "Small",
+		"MediumLabel": "Medium",
+		"LargeLabel": "Large",
+		"ExtraLargeLabel": "Extra Large",
+		"SmallSize": "S",
+		"MediumSize": "M",
+		"LargeSize": "L",
+		"ExtraLargeSize": "XL",
+		"Title": "It Comes With Different Sizes!",
+		"Description": "We are able to offer you a wide range of beautiful plants in various sizes. Any tree, no matter how big or small, is willing to be your friend.",
+		"ViewMore": "View More"
+	},
+	"CustomerReviews": {
+		"Title": "Huge love from our customers 😍"
+	},
+	"TopReviewSlider": {},
+	"FooterHeading": {
+		"Title": "Simple. Passionate. Handly.",
+		"Description": "“Plants give us oxygen for the lungs and for the soul.”",
+		"Author": "– Linda Solegato",
+		"ShopAllPlant": "Shop All Plant",
+		"AboutUs": "About Us"
+	},
+	"FooterContact": {
+		"CopyRight": "© 2024 DNDTU GreenDeco. All Rights Reserved."
+	},
+	"HeaderNavigation": {
+		"Plants": "Plants",
+		"AboutUs": "About Us"
+	},
+	"ProductSearchForm": {
+		"Title": "What do you have in mind?",
+		"SearchPlaceholder": "Search for plants",
+		"Search": "Search",
+		"SearchDescription": "* Must contain at least 3 characters and ONLY characters"
+	},
+	"Cart": {
+		"Title": "Your Cart",
+		"Description": "All of your finest choices.",
+
+		"ContinueShopping": "Continue Shopping",
+		"EmptyCart": "Seems like there are no items in your cart..."
+	},
+	"CartList": {
+		"Clear": "Clear"
+	},
+	"CartCalculator": {
+		"Subtotal": "Sub total:",
+		"Checkout": "Check Out"
+	},
+	"NotificationList": {
+		"Empty": "There has not any new notification",
+		"MostRecent": "Most Recent"
+	},
+	"LoginSuccessMessage": {
+		"Title": "Login Successfully",
+		"Description": "Glad to have you back!"
+	},
+	"RegisterSuccessMessage": {
+		"Title": "Register Successfully",
+		"Moving": "Moving to the",
+		"LoginPage": "Login Page"
+	},
+	"ResetPasswordSuccessMessage": {
+		"Title": "Your Password Has Been Successfully Reset!",
+		"Let": "Let's",
+		"LoginNow": "Login Now"
+	},
+	"NotificationDisplayButton": {
+		"Notification": "Notification"
+	},
+	"UserSettingMenu": {
+		"UserSetting": "user setting",
+		"Logout": "log out"
+	},
+	"DetailContainer": {
+		"Variants": "Pot Color",
+		"Description": "Description",
+		"Size": "Size",
+		"CaringDifficulty": "Caring Difficulty",
+		"IdealLightConditions": "Ideal Light Conditions",
+		"WateringRoutine": "Watering Routine"
+	},
+	"ReviewSection": {
+		"Title": "Comments & Ratings"
+	},
+	"SortByStarMenu": {
+		"Star": "Star",
+		"Reset": "Reset"
+	},
+	"ReviewSorter": {
+		"Newest": "Newest",
+		"LowestRated": "Lowest Rated",
+		"HighestRated": "Highest Rated"
+	},
+	"NoReviewMessage": {
+		"Title": "There are no reviews"
+	},
+	"ReviewItem": {
+		"Rated": "Rated"
+	},
+	"UserSidebarNavigation": {
+		"AccountSettings": "Account Settings",
+		"OrderList": "Order List",
+		"PurchasedProducts": "Purchased Products"
+	},
+	"UserProfilePage": {
+		"AccountPreference": "Account Preference"
+	},
+	"UserProfileForm": {
+		"FirstNameLabel": "First Name",
+		"FirstNamePlaceholder": "First Name",
+		"LastNameLabel": "Last Name",
+		"LastNamePlaceholder": "Last Name",
+		"EmailLabel": "Email",
+		"EmailPlaceholder": "Your Email",
+		"PhoneNumberLabel": "Phone Number",
+		"PhoneNumberPlaceholder": "Phone Number",
+		"Edit": "Edit",
+		"Cancel": "Cancel"
+	},
+	"UserAvatar": {
+		"ChangeAvatar": "Change Avatar",
+		"Remove": "Remove"
+	},
+	"UserOrderListPageLayout": {
+		"Title": "Order List"
+	},
+	"OrderSortMenu": {
+		"SortBy": "Sort By:"
+	},
+	"DefaultSortMenu": {
+		"Newest": "Newest",
+		"Oldest": "Oldest"
+	},
+	"NoItemFoundMessage": {
+		"Title": "Not available"
+	},
+	"OrderStateFilterMenu": {
+		"All": "All",
+		"Draft": "Draft",
+		"Processing": "Processing",
+		"Completed": "Completed",
+		"Cancelled": "Cancelled"
+	},
+	"UserPurchasedProductPageLayout": {
+		"Title": "Purchased Products",
+		"Description": "Where you can revisit or review your finest choices"
+	},
+	"UserReviewPage": {
+		"Title": "Not available"
+	},
+	"OrderItem": {
+		"OrderID": "Order ID: ",
+		"Draft": "Draft",
+		"Processing": "Processing",
+		"Completed": "Completed",
+		"Cancelled": "Cancelled",
+		"View": "View"
+	},
+	"ItemButtons": {
+		"Review": "Review",
+		"View": "View"
+	},
+	"ShippingDetailForm": {
+		"Title": "Delivery Information",
+		"CityLabel": "City",
+		"CityPlaceholder": "City",
+		"DistrictLabel": "District",
+		"DistrictPlaceholder": "District",
+		"WardLabel": "Ward",
+		"WardPlaceholder": "Ward",
+		"AddressLabel": "Address",
+		"AddressPlaceholder": "Address",
+		"PlaceOrder": "Place Order",
+		"Processing": "Processing..."
+	},
+	"PaymentGuide": {
+		"Title": "Here is your Order ID:",
+		"Description": "You can proceed to pay now or later in your order list",
+		"Content1": "Please complete the payment within ",
+		"Content2": "10 days",
+		"Content3": " or this order will be ",
+		"Content4": "cancelled",
+		"Notification": "Your order will be updated within 24 hours after we recieved your money.",
+		"BackToShopping": "Back to Shopping",
+		"ViewOrderList": "View Order List"
+	},
+	"PaymentPage": {
+		"Title": "Thank you for shopping at GreenDeco ",
+		"PaymentSuccessful": "Payment Successful!",
+		"PaymentUnsuccessful": "Payment Unsuccessful!",
+		"ThankYou": "Thank you for choosing us",
+		"Description": "Don't worry, you can retry later in your order detail",
+		"BackToShopping": "Back to Shopping",
+		"ViewOrderList": "View Order List"
+	},
+	"PaymentInformation": {
+		"AccountNumber": "Account Number: ",
+		"AccountOwnerName": "Account Owner Name: ",
+		"Bank": "Bank: ",
+		"TransactionContent": "Transaction Content:"
+	},
+	"ManageProductLayout": {
+		"Title": "Order Successfully Placed!"
+	},
+	"AuthenticationLayout": {
+		"BackToShopping": "Back to Shopping",
+		"English": "English",
+		"Vietnamese": "Vietnamese"
+	},
+	"OrderDetail": {
+		"OrderInfo": "Order Information",
+		"ProceedToPayment": "Proceed to Payment",
+		"ID": "ID:",
+		"DateCreated": "Date Created:",
+		"OrderStatus": "Order Status:",
+		"Draft": "Draft",
+		"Processing": "Processing",
+		"Completed": "Completed",
+		"Cancelled": "Cancelled",
+		"PaymentStatus": "Payment Status:",
+		"PaymentPending": "Waiting for Payment",
+		"PaymentReceived": "Payment Received "
+	},
+	"CustomerAndShippingDetail": {
+		"Customer": "Customer",
+		"ShippingAddress": "Shipping Address"
+	},
+	"OrderDetailContainer": {
+		"Cancel": "Cancel Reason: ",
+		"Failed": "Failed"
+	},
+	"OrderPrice": {
+		"CouponCode": "Coupon Code:",
+		"Discount": "Discount",
+		"Total": "Total:"
+	},
+	"OrderDetailPage": {
+		"BackToOrderList": "Back to Order List"
+	},
+	"CreateReviewForm": {
+		"Rating": "Rating",
+		"CommentLabel": "Comment",
+		"CommentPlaceholder": "Leave your comment here",
+		"Cancel": "Cancel",
+		"SendReview": "Send Review",
+		"Sending": "Sending..."
+	},
+	"LanguageDisplayButton": {
+		"English": "English",
+		"Vietnamese": "Vietnamese"
+	}
+}

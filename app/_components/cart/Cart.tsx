@@ -2,14 +2,16 @@
 import { useCartQuery } from '@/app/_hooks/useCart'
 import { CartList as List } from './CartList'
 import { CartCalculator as Calculator } from './CartCalculator'
+import { useDialogStore } from '@/app/_configs/store/useDialogStore'
 import { ArrowRightIcon } from '@heroicons/react/24/solid'
 import { useRef } from 'react'
 import { motion } from 'framer-motion'
 import useClickOutside from '@/app/_hooks/useClickOutside'
 import { MutatingDots } from 'react-loader-spinner'
-import { useDialogStore } from '@/app/_config/store/useDialogStore'
+import { useTranslations } from 'next-intl'
 
 export default function Cart() {
+	const t = useTranslations('Cart')
 	const { cartQuery } = useCartQuery()
 	const cartRef = useRef<any>()
 
@@ -20,6 +22,18 @@ export default function Cart() {
 	const { closeDialog } = useDialogStore()
 
 	const { data, isLoading, isFetching, isSuccess, isFetched } = cartQuery
+
+	const NoItemMessage = () => {
+		return (
+			<div className='p-comfortable'>
+				<div className='mb-compact flex items-center gap-comfortable'>
+					<span className='flex-1 text-body-sm text-primary-625-80'>
+						{t('EmptyCart')}
+					</span>
+				</div>
+			</div>
+		)
+	}
 
 	return (
 		<motion.div
@@ -38,17 +52,17 @@ export default function Cart() {
 			<div className=' p-comfortable pb-0'>
 				<div className='flex'>
 					<h3 className='mb-[4px] flex-1 text-heading-1 capitalize text-primary-5555'>
-						Your Cart
+						{t('Title')}
 					</h3>
 					<span
 						onClick={() => closeDialog()}
 						className='flex cursor-pointer items-center gap-compact text-body-xsm text-primary-5555-60 hover:text-primary-5555'
 					>
-						Continue Shopping{' '}
+						{t('ContinueShopping')}{' '}
 						<ArrowRightIcon className='aspect-square h-[14px] translate-y-[1px]' />
 					</span>
 				</div>
-				<p className='text-body-md text-primary-5555-80'>All of your finest choices.</p>
+				<p className='text-body-md text-primary-5555-80'>{t('Description')}</p>
 			</div>
 			{isFetching && (
 				<MutatingDots
@@ -80,17 +94,5 @@ export default function Cart() {
 				</div>
 			)}
 		</motion.div>
-	)
-}
-
-function NoItemMessage() {
-	return (
-		<div className='p-comfortable'>
-			<div className='mb-compact flex items-center gap-comfortable'>
-				<span className='flex-1 text-body-sm text-primary-625-80'>
-					Seems like there are no items in your cart...
-				</span>
-			</div>
-		</div>
 	)
 }

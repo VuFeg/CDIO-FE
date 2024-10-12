@@ -1,4 +1,4 @@
-import { INVALID_NAME_STRING } from '@/app/_config/constants/variables'
+import { INVALID_NAME_STRING } from '@/app/_configs/constants/variables'
 import axios from 'axios'
 
 const PRODUCT_URL = `${process.env.NEXT_PUBLIC_GREENDECO_BACKEND_API}`
@@ -21,6 +21,7 @@ export type ProductData = {
 	created_at: string
 	default_variant: string
 	currency: string
+	// quantity: number
 }
 
 export type ProductByIdResponseData = {
@@ -50,6 +51,7 @@ export type VariantData = {
 	image: string
 	description: string
 	currency: string
+	quantity: string
 	created_at: string
 	updated_at: string
 }

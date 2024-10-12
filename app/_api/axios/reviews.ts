@@ -1,9 +1,9 @@
 import axios from 'axios'
 import { ProductData } from './product'
 import { UserProfileResponseData } from './user'
+import { Sort } from '@/app/_configs/constants/paramKeys'
 import { getCookie } from 'cookies-next'
-import { Sort } from '@/app/_config/constants/paramKeys'
-import { ACCESS_TOKEN_COOKIE_NAME } from '@/app/_config/constants/cookies'
+import { ACCESS_TOKEN_COOKIE_NAME } from '@/app/_configs/constants/cookies'
 
 const REVIEW_URL = `${process.env.NEXT_PUBLIC_GREENDECO_BACKEND_API}/review`
 

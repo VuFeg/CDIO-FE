@@ -1,9 +1,11 @@
 import { CartListFullDetail } from '@/app/_hooks/useCart'
 import Button from '../Button'
 import { useRouter } from 'next/navigation'
-import { useDialogStore } from '@/app/_config/store/useDialogStore'
+import { useDialogStore } from '@/app/_configs/store/useDialogStore'
+import { useTranslations } from 'next-intl'
 
 export function CartCalculator({ items }: CartListFullDetail) {
+	const t = useTranslations('CartCalculator')
 	const router = useRouter()
 	const { closeDialog } = useDialogStore()
 	const currency = items[0].variant.currency
@@ -18,7 +20,7 @@ export function CartCalculator({ items }: CartListFullDetail) {
 	return (
 		<>
 			<div className='mb-compact flex items-center gap-comfortable'>
-				<span className='flex-1 text-body-sm'>Sub total:</span>
+				<span className='flex-1 text-body-sm'>{t('Subtotal')}</span>
 				<span className='text-body-lg font-semi-bold'>
 					{totalPrice} {currency}
 				</span>
@@ -28,7 +30,7 @@ export function CartCalculator({ items }: CartListFullDetail) {
 				onClick={handleDirectToCheckout}
 				className='w-full'
 			>
-				Check Out
+				{t('Checkout')}
 			</Button>
 		</>
 	)

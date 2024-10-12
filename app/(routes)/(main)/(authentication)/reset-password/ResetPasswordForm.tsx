@@ -1,6 +1,10 @@
 'use client'
 import { useForm, SubmitHandler } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
+import {
+	ResetPasswordFormInputType,
+	ResetPasswordSchema,
+} from '@/app/_configs/schemas/authentication'
 import { useMutation } from '@tanstack/react-query'
 import { resetPassword } from '@/app/_api/axios/authentication'
 import { AxiosError } from 'axios'
@@ -8,12 +12,10 @@ import { notifyResetPasswordFail, notifyResetPasswordSuccess } from '../Notifica
 import { TextField } from '@/app/_components/form'
 import Button from '@/app/_components/Button'
 import { useRouter } from 'next/navigation'
-import {
-	ResetPasswordFormInputType,
-	ResetPasswordSchema,
-} from '@/app/_config/schemas/authentication'
+import { useTranslations } from 'next-intl'
 
 export default function ResetPasswordForm({ resetPasswordToken }: { resetPasswordToken: string }) {
+	const t = useTranslations('ResetPasswordForm')
 	const router = useRouter()
 	const defaultInputValues: ResetPasswordFormInputType = {
 		password: '',
@@ -68,16 +70,16 @@ export default function ResetPasswordForm({ resetPasswordToken }: { resetPasswor
 			>
 				<TextField
 					type='password'
-					label='New Password'
-					placeholder='Your new password'
+					label={t('NewPasswordLabel')}
+					placeholder={t('NewPasswordPlaceholder')}
 					register={register('password')}
 					error={Boolean(errors?.password)}
 					helperText={errors?.password?.message}
 				/>
 				<TextField
 					type='password'
-					label='Confirm New Password'
-					placeholder='Confirm your new password'
+					label={t('ConfirmPasswordLabel')}
+					placeholder={t('ConfirmPasswordPlaceholder')}
 					register={register('passwordConfirm')}
 					error={Boolean(errors?.passwordConfirm)}
 					helperText={errors?.passwordConfirm?.message}
@@ -86,7 +88,7 @@ export default function ResetPasswordForm({ resetPasswordToken }: { resetPasswor
 					type='submit'
 					disabled={resetPasswordMutation.isLoading}
 				>
-					{resetPasswordMutation.isLoading ? 'Sending...' : 'Reset Password'}
+					{resetPasswordMutation.isLoading ? t('Sending') : t('ResetPassword')}
 				</Button>
 			</form>
 		</>

@@ -4,41 +4,41 @@ import Step2 from '@/app/_assets/images/homepage/buyingprocess/step2.svg'
 import Step3 from '@/app/_assets/images/homepage/buyingprocess/step3.svg'
 import Step4 from '@/app/_assets/images/homepage/buyingprocess/step4.svg'
 import Step5 from '@/app/_assets/images/homepage/buyingprocess/step5.svg'
+import { useTranslations } from 'next-intl'
 
 type BuyingStepType = {
 	label: string
 	icon: any //NOTE: because icons are svgr, so the library recommend to use any type to avoid conflict
 }
 
-const buyingProcess: BuyingStepType[] = [
-	{
-		label: 'pick your plants',
-		icon: Step1,
-	},
-	{
-		label: 'choose a pot color',
-		icon: Step2,
-	},
-	{
-		label: 'put in your cart',
-		icon: Step3,
-	},
-	{
-		label: 'have them shipped',
-		icon: Step4,
-	},
-	{
-		label: 'watch them grow',
-		icon: Step5,
-	},
-]
 export default function BuyingProcess() {
+	const t = useTranslations('BuyingProcess')
+	const buyingProcess: BuyingStepType[] = [
+		{
+			label: t('Step1'),
+			icon: Step1,
+		},
+		{
+			label: t('Step2'),
+			icon: Step2,
+		},
+		{
+			label: t('Step3'),
+			icon: Step3,
+		},
+		{
+			label: t('Step4'),
+			icon: Step4,
+		},
+		{
+			label: t('Step5'),
+			icon: Step5,
+		},
+	]
 	return (
 		<section className='section-home bg-primary-5555-20/20'>
 			<div className='flex-col-start container items-center gap-comfortable'>
-				<h2 className='text-heading-1 text-primary-418'>
-					Have Your Own Plants With 5 Simple Steps
-				</h2>
+				<h2 className='text-heading-1 text-primary-418'>{t('Title')}</h2>
 				<div className='flex  w-full items-center justify-center gap-comfortable'>
 					{buyingProcess.map((step, index, row) => (
 						<>
