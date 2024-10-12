@@ -1,6 +1,6 @@
 <br/>
 <p align="center">
-  <a href="https://github.com/minhman2501/greendeco-fe">
+  <a href="https://github.com/VuFeg/CDIO-FE">
     <img src="https://api.logo.com/api/v2/images?logo=logo_dec2751a-e5fd-45e3-ac8c-26488931ace5&u=1697101283144&format=svg&margins=166&width=1000&height=750&fit=contain" alt="Logo" width="80" >
   </a>
 
@@ -10,7 +10,6 @@
     An E-commerce Website Which Sells Plants
     <br/>
     <br/>
-    <a href="https://greendeco-fe.vercel.app">View Demo</a>
   </p>
 </p>
 
@@ -58,13 +57,11 @@ Distributed under the MIT License. See [LICENSE](https://github.com/minhman2501/
 
 ## Authors
 
-* **Man Pham** - *Student* - [Man Pham](https://github.com/minhman2501) - *Front-End Developing, UI/UX Designing*
-* **Tri Nguyen** - *Student* - [Tri Nguyen](https://github.com/uncleTen276/) - *Back-End Developing*
-
-## Acknowledgements
-
-* [Man Pham](https://github.com/minhman2501)
-* [Tri Nguyen](https://github.com/uncleTen276/)
+* **Vu Nguyen** - *Student* - [Vu Nguyen](https://github.com/VuFeg)
+* **Hoang Long** - *Student* - [Hoang Long](https://github.com/PhamNgocHoangLong)
+* **Dinh Long** - *Student* - [Dinh Long](https://github.com/Dlong2030)
+* **Quang Nguyen** - *Student* - [Quang Nguyen](https://github.com/nguyenquangtringuyen02)
+* **Trong Dat** - *Student* - [Trong Dat](https://github.com/trongdatlaptrinh)
 
 ## Learn More
 
