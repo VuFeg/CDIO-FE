@@ -1,8 +1,7 @@
 import React from 'react'
-import { ToastContentProps, toast, ToastOptions } from 'react-toastify'
+import { toast, ToastOptions } from 'react-toastify'
 import Link from 'next/link'
-import { AUTHENTICATION_ROUTE, SHOP_ROUTE } from '@/app/_configs/constants/variables'
-import { useTranslations } from 'next-intl'
+import { AUTHENTICATION_ROUTE } from '@/app/_configs/constants/variables'
 
 export const notifyRegisterSuccess = (options?: ToastOptions) => {
 	toast.success(<RegisterSuccessMessage />, {
@@ -47,18 +46,17 @@ export const notifySendEmailFail = (errorMessage?: string) => {
 }
 
 const RegisterSuccessMessage = () => {
-	const t = useTranslations('RegisterSuccessMessage')
 	return (
 		<div className='flex flex-col gap-[4px] pl-compact pr-common text-body-sm'>
-			<h3 className='capitalize text-primary-625'>{t('Title')}</h3>
+			<h3 className='capitalize text-primary-625'>Register Successfully</h3>
 			<p>
-				{t('Moving')}{' '}
+				Moving to the{' '}
 				<Link
 					replace
 					href={AUTHENTICATION_ROUTE.LOGIN.LINK}
 					className='hover:font-bold'
 				>
-					{t('LoginPage')}
+					Login Page
 				</Link>
 			</p>
 		</div>
@@ -66,11 +64,10 @@ const RegisterSuccessMessage = () => {
 }
 
 const LoginSuccessMessage = () => {
-	const t = useTranslations('LoginSuccessMessage')
 	return (
 		<div className='flex flex-col gap-[4px] pl-compact pr-common text-body-sm'>
-			<h3 className='capitalize text-primary-625'>{t('Title')}</h3>
-			<p>{t('Description')}</p>
+			<h3 className='capitalize text-primary-625'>Login Successfully</h3>
+			<p>Glad to have you back!</p>
 		</div>
 	)
 }
@@ -87,18 +84,19 @@ const LoginErrorMessage = ({ message }: { message?: string }) => (
 )
 
 const ResetPasswordSuccessMessage = () => {
-	const t = useTranslations('ResetPasswordSuccessMessage')
 	return (
 		<div className='flex flex-col gap-[4px] pl-compact pr-common text-body-sm'>
-			<h3 className='capitalize text-primary-625'>{t('Title')}</h3>
+			<h3 className='capitalize text-primary-625'>
+				Your Password Has Been Successfully Reset!
+			</h3>
 			<p>
-				{t('Let')}{' '}
+				Let's{' '}
 				<Link
 					replace
 					href={AUTHENTICATION_ROUTE.LOGIN.LINK}
 					className='hover:font-bold'
 				>
-					{t('LoginNow')}
+					Login Now
 				</Link>
 			</p>
 		</div>

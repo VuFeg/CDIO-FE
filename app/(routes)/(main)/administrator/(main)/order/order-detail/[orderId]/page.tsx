@@ -48,7 +48,7 @@ export default function OrderDetailManagementPage({
 					/>
 				</div>
 			)}
-			{isSuccess && <ContentWrapper order={data!} />}
+			{isSuccess && <ContentWrapper order={data} />}
 			{isError && <ErrorMessage />}
 		</>
 	)

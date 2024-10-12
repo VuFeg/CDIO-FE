@@ -96,28 +96,28 @@ export default function ShippingDetailForm({ items }: ShippingDetailFormProps) {
 		//NOTE: Execute the Mutation
 		const shippingAddress = handleJoiningValues(values)
 
-		items.forEach((item) => {
-			const { price, color_name, quantity, image, product, ...restValues } = item.variant
+		// items.forEach((item) => {
+		// 	const { price, color_name, quantity, image, product, ...restValues } = item.variant
 
-			updateVariant({
-				variantData: {
-					id: item.variant.id,
-					product_id: product,
-					name: `${item.variant.name} ${color_name}`,
-					color_name: color_name,
-					price: parseInt(price),
-					image: image,
-					currency: item.variant.currency,
-					quantity: parseInt(quantity) - item.quantity,
-					available: true, // or any appropriate value
-					color: item.variant.color,
-					description: item.variant.description, // or any appropriate value
-					is_default: false, // or any appropriate value
-				},
-				adminAccessToken:
-					'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbiI6dHJ1ZSwiZXhwIjoxNzI4NjMwOTI0LCJ1c2VyX2lkIjoiN2FlZWE3MjYtMDkwOS00ZGQ4LWFjOTctNDhiMTVlZjM3NGY2In0.QlwaAu7BOLSRJqz-UJm8ymRbyiu2RsqHjsKkeWKQt2M',
-			})
-		})
+		// 	updateVariant({
+		// 		variantData: {
+		// 			id: item.variant.id,
+		// 			product_id: product,
+		// 			name: `${item.variant.name} ${color_name}`,
+		// 			color_name: color_name,
+		// 			price: parseInt(price),
+		// 			image: image,
+		// 			currency: item.variant.currency,
+		// 			quantity: parseInt(quantity) - item.quantity,
+		// 			available: true, // or any appropriate value
+		// 			color: item.variant.color,
+		// 			description: item.variant.description, // or any appropriate value
+		// 			is_default: false, // or any appropriate value
+		// 		},
+		// 		adminAccessToken:
+		// 			'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbiI6dHJ1ZSwiZXhwIjoxNzI4NjMwOTI0LCJ1c2VyX2lkIjoiN2FlZWE3MjYtMDkwOS00ZGQ4LWFjOTctNDhiMTVlZjM3NGY2In0.QlwaAu7BOLSRJqz-UJm8ymRbyiu2RsqHjsKkeWKQt2M',
+		// 	})
+		// })
 
 		createOrderMutation.mutate({
 			shipping_address: shippingAddress,
