@@ -147,8 +147,6 @@ export const getProductList = async (params?: FilterParams) => {
 		paramAfterJSON = fieldJSONParse(params)
 	}
 
-	console.log(paramAfterJSON)
-
 	return await productApi
 		.get<ProductListData>('/product', {
 			params: { ...paramAfterJSON },

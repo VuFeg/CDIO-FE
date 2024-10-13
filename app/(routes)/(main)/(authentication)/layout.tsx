@@ -1,5 +1,4 @@
-'use client'
-import { ReactNode, useState } from 'react'
+import { ReactNode } from 'react'
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -26,7 +25,6 @@ export default function AuthenticationLayout({ children }: { children: ReactNode
 							<ArrowLeftIcon className='aspect-square h-[16px]' />
 							{t('BackToShopping')}
 						</Link>
-
 						<form className='max-w-sm'>
 							<select
 								onChange={(e) => setLanguageValue(e.target.value)}

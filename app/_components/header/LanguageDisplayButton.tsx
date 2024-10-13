@@ -1,13 +1,17 @@
 'use client'
 import { GlobeAsiaAustraliaIcon } from '@heroicons/react/24/solid'
-import React, { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useTranslations } from 'next-intl'
 import setLanguageValue from '@/app/_actions/SetLanguageAction'
+import { useState } from 'react'
 
 export const LanguageDisplayButton = () => {
 	const t = useTranslations('LanguageDisplayButton')
 	const [open, setOpen] = useState(false)
+	const handleSetLanguage = (language: string) => {
+		setLanguageValue(language)
+		setOpen(false)
+	}
 	return (
 		<div>
 			<button
@@ -35,13 +39,13 @@ export const LanguageDisplayButton = () => {
 					>
 						<div className='flex flex-col border-primary-5555-40 bg-primary-5555-20/40 px-2 py-4'>
 							<button
-								onClick={() => setLanguageValue('en')}
+								onClick={() => handleSetLanguage('en')}
 								className='px-1 py-2 text-primary-625 transition duration-75 ease-in hover:opacity-50'
 							>
 								{t('English')}
 							</button>
 							<button
-								onClick={() => setLanguageValue('vi')}
+								onClick={() => handleSetLanguage('vi')}
 								className='px-1 py-2 text-primary-625 transition duration-75 ease-in hover:opacity-50'
 							>
 								{t('Vietnamese')}

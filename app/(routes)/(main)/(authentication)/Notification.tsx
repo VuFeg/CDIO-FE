@@ -90,7 +90,7 @@ const ResetPasswordSuccessMessage = () => {
 				Your Password Has Been Successfully Reset!
 			</h3>
 			<p>
-				Let's{' '}
+				Let&apos;s{' '}
 				<Link
 					replace
 					href={AUTHENTICATION_ROUTE.LOGIN.LINK}
