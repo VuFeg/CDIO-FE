@@ -1,4 +1,5 @@
 import {
+	getOrderFullDetailAsAdministratorById,
 	OrderState,
 	ProcessStatusRequest,
 	updateOrderProcessStatus,
@@ -20,6 +21,8 @@ import { useDialogStore } from '@/app/_configs/store/useDialogStore'
 import createNotificationMessage from '@/app/_hooks/useOrderNotificationMessage'
 import { useRef } from 'react'
 import useClickOutside from '@/app/_hooks/useClickOutside'
+import { getVariantById } from '@/app/_api/axios/product'
+import { updateVariant } from '@/app/_api/axios/admin/product'
 
 type PickUpdateModalType = {
 	order: OrderState
@@ -59,8 +62,31 @@ export default function PickUpDateModal({ order }: PickUpdateModalType) {
 		},
 	})
 
-	const handleOnSubmit: SubmitHandler<ProcessStatusRequest> = (values, e) => {
+	const handleOnSubmit: SubmitHandler<ProcessStatusRequest> = async (values, e) => {
 		e?.preventDefault()
+
+		const dataOrder = await getOrderFullDetailAsAdministratorById(order.order_id)
+		dataOrder?.productList.map(async (product) => {
+			const variant = await getVariantById(product.variant_id)
+			const totalQuantity = parseInt(variant.items.quantity) - product.quantity
+			await updateVariant({
+				variantData: {
+					id: variant.items.id,
+					product_id: variant.items.product,
+					name: variant.items.name,
+					price: parseInt(variant.items.price),
+					image: variant.items.image,
+					quantity: totalQuantity,
+					available: variant.items.available, // or appropriate value
+					color: variant.items.color, // or appropriate value
+					color_name: variant.items.color_name, // or appropriate value
+					description: variant.items.description, // or appropriate value
+					currency: variant.items.currency, // or appropriate value
+					is_default: true, // or appropriate value
+				},
+				adminAccessToken: adminAccessToken,
+			})
+		})
 
 		const notificationMessage = createNotificationMessage(
 			order.order_id,
